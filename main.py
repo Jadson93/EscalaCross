@@ -6,6 +6,7 @@ app = Flask(__name__)
 # route -> meusite.com/
 # funçao -> o que será exibido no site
 # templates
+
 @app.route("/")
 def homepage():
     return render_template("homepage.html")
@@ -24,6 +25,10 @@ def turmas():
 @app.route("/ferias", methods=["POST"])
 def ferias():
     return render_template("ferias.html")
+
+@app.route("/incluirAusencia", methods=["POST"])
+def incluirAusencia():
+    return render_template("incluirAusencia.html")
 
 # colocar site no ar
 if __name__=="__main__":
