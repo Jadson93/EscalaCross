@@ -9,11 +9,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def homepage():
-    return render_template("homepage.html")
+    return render_template("index.html")
 
 @app.route("/voltar")
 def voltar():
-    return render_template("homepage.html")
+    return render_template("index.html")
 
 @app.route("/ausentes", methods=["POST"])
 def ausentes():
@@ -29,6 +29,10 @@ def ferias():
 @app.route("/incluirAusencia", methods=["POST"])
 def incluirAusencia():
     return render_template("incluirAusencia.html")
+
+@app.route("/erro", methods=["POST"])
+def erro():
+    return render_template("erro.html")
 
 # colocar site no ar
 if __name__=="__main__":

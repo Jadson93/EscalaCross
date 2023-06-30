@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>erro 404</title>
 </head>
 <body>
-$END$
+    <header>
+        <nav>
+            <a href="#" class="logo">Dev.</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Util</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="imgquadrada">
+            <div class="left">
+                <p>Erro 404</p>
+                <h4>We can't seen to find the page<br> you are looking for.</h4>
+                <a href="#" class="btn">Home</a>
+            </div>
+            <div class="imgquadrada">
+                <img class="imgquadrada" src="static/empilhadeira.png">
+                <div class="shadow"></div>
+            </div>
+        </section>
+    </main>
+    <form action="/voltar">
+        <button>voltar</button>
+    </form>
 </body>
 </html>
+
