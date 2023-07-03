@@ -34,6 +34,10 @@ def incluirAusencia():
 def erro():
     return render_template("erro.html")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("erro.html"), 404
+
 # colocar site no ar
 if __name__=="__main__":
     app.run(debug=True)
